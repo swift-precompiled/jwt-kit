@@ -14,7 +14,11 @@ let package = Package(
     products: [
         .library(
             name: "JWTKit",
-            targets: ["JWTKit_PrecompiledProduct"]
+            targets: [
+                "JWTKit",
+                "CJWTKitBoringSSL",
+                "JWTKit_PrecompiledProduct"
+            ]
         )
     ],
     dependencies: [
@@ -26,8 +30,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "CJWTKitBoringSSL",
-            url: "https://github.com/swift-precompiled/jwt-kit/releases/download/4.13.5/CJWTKitBoringSSL-20eaba5bec79da2174f1aca7d33ccfa19d5b6c4cd9cba86c1272296b75d3e601.xcframework.zip",
-            checksum: "20eaba5bec79da2174f1aca7d33ccfa19d5b6c4cd9cba86c1272296b75d3e601"
+            url: "https://github.com/swift-precompiled/jwt-kit/releases/download/4.13.5/CJWTKitBoringSSL-2eab8b8a1c2aae437b09ac23b47cfaa2365784f83b3c8b942cda8f36904c4a70.xcframework.zip",
+            checksum: "2eab8b8a1c2aae437b09ac23b47cfaa2365784f83b3c8b942cda8f36904c4a70"
         ),
         .target(
             name: "JWTKit_Aggregation",
@@ -36,18 +40,18 @@ let package = Package(
         ),
         .binaryTarget(
             name: "JWTKit",
-            url: "https://github.com/swift-precompiled/jwt-kit/releases/download/4.13.5/JWTKit-647fefdfea19e79617b8a30ceaa843470a7d5a57669b2eab04c194fa8d6c0aaa.xcframework.zip",
-            checksum: "647fefdfea19e79617b8a30ceaa843470a7d5a57669b2eab04c194fa8d6c0aaa"
+            url: "https://github.com/swift-precompiled/jwt-kit/releases/download/4.13.5/JWTKit-b82f9702ae926caf4dd04b2f867d3c419d69b3e69e215bf0cecce16ba940ec99.xcframework.zip",
+            checksum: "b82f9702ae926caf4dd04b2f867d3c419d69b3e69e215bf0cecce16ba940ec99"
         ),
         .target(
             name: "JWTKit_PrecompiledProduct",
             dependencies: [
                 "JWTKit_Aggregation",
-                "CJWTKitBoringSSL",
                 .product(
                     name: "Crypto",
                     package: "swift-crypto"
-                )
+                ),
+                "CJWTKitBoringSSL"
             ]
         )
     ],
