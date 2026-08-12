@@ -30,18 +30,19 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "CJWTKitBoringSSL",
-            url: "https://github.com/swift-precompiled/jwt-kit/releases/download/4.13.5/CJWTKitBoringSSL-2eab8b8a1c2aae437b09ac23b47cfaa2365784f83b3c8b942cda8f36904c4a70.xcframework.zip",
-            checksum: "2eab8b8a1c2aae437b09ac23b47cfaa2365784f83b3c8b942cda8f36904c4a70"
+            url: "https://github.com/swift-precompiled/jwt-kit/releases/download/4.13.5/CJWTKitBoringSSL-cfa902eee48a4790ba730a1a668561020640ebda798a2041dacc8ac35c15af85.xcframework.zip",
+            checksum: "cfa902eee48a4790ba730a1a668561020640ebda798a2041dacc8ac35c15af85"
         ),
         .target(
             name: "JWTKit_Aggregation",
             dependencies: ["JWTKit"],
+            packageAccess: false,
             swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "JWTKit",
-            url: "https://github.com/swift-precompiled/jwt-kit/releases/download/4.13.5/JWTKit-b82f9702ae926caf4dd04b2f867d3c419d69b3e69e215bf0cecce16ba940ec99.xcframework.zip",
-            checksum: "b82f9702ae926caf4dd04b2f867d3c419d69b3e69e215bf0cecce16ba940ec99"
+            url: "https://github.com/swift-precompiled/jwt-kit/releases/download/4.13.5/JWTKit-bb530786dd271d2f70df4b7b0676c6339a8e5afc93f837caebbd591c8b579db9.xcframework.zip",
+            checksum: "bb530786dd271d2f70df4b7b0676c6339a8e5afc93f837caebbd591c8b579db9"
         ),
         .target(
             name: "JWTKit_PrecompiledProduct",
@@ -52,7 +53,8 @@ let package = Package(
                     package: "swift-crypto"
                 ),
                 "CJWTKitBoringSSL"
-            ]
+            ],
+            packageAccess: false
         )
     ],
     cxxLanguageStandard: .cxx11
