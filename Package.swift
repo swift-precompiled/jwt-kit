@@ -30,8 +30,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "CJWTKitBoringSSL",
-            url: "https://github.com/swift-precompiled/jwt-kit/releases/download/4.13.5/CJWTKitBoringSSL-cfa902eee48a4790ba730a1a668561020640ebda798a2041dacc8ac35c15af85.xcframework.zip",
-            checksum: "cfa902eee48a4790ba730a1a668561020640ebda798a2041dacc8ac35c15af85"
+            url: "https://github.com/swift-precompiled/jwt-kit/releases/download/4.13.5/CJWTKitBoringSSL-26b0d98d8ca2804ceeecea25983cb10f9a8ed77a8818af817072a84ff1ae49c7.xcframework.zip",
+            checksum: "26b0d98d8ca2804ceeecea25983cb10f9a8ed77a8818af817072a84ff1ae49c7"
         ),
         .target(
             name: "JWTKit_Aggregation",
@@ -41,8 +41,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "JWTKit",
-            url: "https://github.com/swift-precompiled/jwt-kit/releases/download/4.13.5/JWTKit-bb530786dd271d2f70df4b7b0676c6339a8e5afc93f837caebbd591c8b579db9.xcframework.zip",
-            checksum: "bb530786dd271d2f70df4b7b0676c6339a8e5afc93f837caebbd591c8b579db9"
+            url: "https://github.com/swift-precompiled/jwt-kit/releases/download/4.13.5/JWTKit-15473e9fde3b083475919b5502a9ec6015bdc4a7c6b07c3e688f4153a4f020c5.xcframework.zip",
+            checksum: "15473e9fde3b083475919b5502a9ec6015bdc4a7c6b07c3e688f4153a4f020c5"
         ),
         .target(
             name: "JWTKit_PrecompiledProduct",
